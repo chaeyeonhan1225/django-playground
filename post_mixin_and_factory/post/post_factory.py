@@ -1,7 +1,7 @@
 from factory.django import DjangoModelFactory
 from factory import Faker
 
-from post_command.post.models import Post
+from post.models import Post
 
 
 class PostFactory(DjangoModelFactory):
