@@ -1,7 +1,5 @@
 from django.db import models
 
-post_states = (("PUBLISHED", "발행"), ("HIDDEN", "숨김"), ("DELETED", "삭제"))
-
 
 class TimeRecordingMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
@@ -9,6 +7,8 @@ class TimeRecordingMixin(models.Model):
 
     class Meta:
         abstract = True
+
+post_states = (("PUBLISHED", "발행"), ("HIDDEN", "숨김"), ("DELETED", "삭제"))
 
 
 class Post(TimeRecordingMixin, models.Model):
