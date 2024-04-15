@@ -1,12 +1,24 @@
 from django.db import models
 
 
+class VersionMixin(models.Model):
+    version = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        abstract = True
+
+    def _do_update(self):
+        super(VersionMixin, self)._do_update()
+
+
+
 class TimeRecordingMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True
+
 
 post_states = (("PUBLISHED", "발행"), ("HIDDEN", "숨김"), ("DELETED", "삭제"))
 

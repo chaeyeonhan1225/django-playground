@@ -2,7 +2,7 @@ from django.test import TestCase
 
 from post.comment_factory import CommentFactory
 from post.post_factory import PostFactory
-from post.models import Post
+from post.models import Post, Comment
 
 
 class CommentFactoryTest(TestCase):
@@ -28,4 +28,3 @@ class CommentFactoryTest(TestCase):
         post_comments = CommentFactory.create_batch(size=10, post=post)
 
         self.assertEqual(len(post_comments), post.comments.count())
-

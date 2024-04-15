@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",
+    "rest_framework",
     "factory",
+    "celery",
+    "flower",
     "post.apps.PostConfig",
 ]
 
