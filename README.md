@@ -1,2 +1,7 @@
-# django-playground
-Django Playground
+# Django Playground
+Django 학습용 소소한 프로젝트 모음입니다.
+
+- post_command
+  - Djnago Custom Command 실습
+- post_mixin_and_factory
+  - Mixin모델, Django factory_boy 실습
